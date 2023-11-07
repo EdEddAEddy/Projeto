@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Teste Prático | Cadastro | daVinti</title>
+  </head>
+  <body>
+    <main class="bg-blue-400 h-screen flex items-center sm:justify-center">
+      <section class="bg-white h-auto w-screen max-w-lg rounded-lg sm:w-4/5">
+        <form class="mx-4">
+          <div class="flex flex-col mt-8">
+            <label for="nome">Nome</label>
+            <input
+              placeholder="Digite o nome"
+              class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+              name="nome"
+              id="nome"
+              type="text"
+            />
+            <label class="mt-4" for="idade">Idade</label>
+            <input
+              placeholder="Digite a idade"
+              class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+              name="idade"
+              id="idade"
+              type="number"
+            />
+          </div>
+          <div class="flex flex-col mt-4">
+            <label for="numero">Telefone</label>
+            <div class="flex justify-between gap-4">
+              <input
+                placeholder="Digite o número telefonico"
+                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                name="numero"
+                id="numero"
+                type="text"
+              />
+              <button
+                class="border px-3 font-semibold rounded-md bg-gray-100"
+                type="button"
+                onclick="add()"
+              >
+                ADD
+              </button>
+            </div>
+            <div class="mt-2 h-7" id="numerosTela"></div>
+          </div>
+          <div class="flex justify-end gap-7">
+            <button class="bg-red-300 font-bold rounded-lg mt-4 border py-2 px-4" onclick="window.location = 'index.html'" type="button">Cancelar</button>
+
+            <button
+              class="bg-blue-300 font-bold rounded-lg mt-4 border py-2 px-4"
+              type="button"
+              onclick="includeContact()"
+            >
+              Confirmar
+            </button>
+          </div>
+        </form>
+        <button onclick="getAllContacts()"></button>
+      </section>
+    </main>
+  </body>
+</html>

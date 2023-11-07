@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Teste Prático | Index | daVinti</title>
+  </head>
+  <body>
+    <main class="bg-blue-400 h-screen overflow-y-hidden ">
+      <nav class="h-16 flex items-center justify-between mt-2 gap-5 mx-4">
+        <input
+          placeholder="Digite o nome ou número"
+          class="h-11 w-4/5 placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+          type="text"
+          id="pesquisa"
+        />
+        <button
+        class="bg-blue-300 w-60 font-bold rounded-lg mt-0 border py-2 px-4"
+        type="button"
+        onclick="window.location = 'cadastro.html'"
+      >
+        Adicionar contato
+      </button>      </nav>
+      <section class="bg-white h-screen rounded-md">
+        <script>
+          getAllContacts();
+        </script>
+        <ul id="listaContatos"></ul>
+      </section>
+    </main>
+  </body>
+</html>
